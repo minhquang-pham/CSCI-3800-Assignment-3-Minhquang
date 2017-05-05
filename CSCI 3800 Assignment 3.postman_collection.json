@@ -1,0 +1,83 @@
+{
+	"variables": [],
+	"info": {
+		"name": "CSCI 3800 Assignment 3",
+		"_postman_id": "cbbf43a8-8eaf-cad0-34ef-f0fce3667747",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Github Test",
+			"request": {
+				"url": "http://clockworklegacy-test.apigee.net/homework3/oauth",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Access Token",
+			"request": {
+				"url": "https://clockworklegacy-test.apigee.net/oauth/client_credential/accesstoken?grant_type=client_credentials",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "ColJvqALQ7UCWRrfr49kIy4rs0ayTpYK",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_secret",
+							"value": "RpPIwNKRfkDAhA9q",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"enabled": false
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Test Invalid Token",
+			"request": {
+				"url": "https://clockworklegacy-test.apigee.net/oauth",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Test Valid Token",
+			"request": {
+				"url": "https://clockworklegacy-test.apigee.net/oauth",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
